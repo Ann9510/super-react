@@ -1,16 +1,10 @@
 import React from "react";
 import "./Toast.css";
+import ToastMessage from "./ToastMessage";
+import ToastButton from "./ToastButton";
 
-const Toast = (props) => {
-  return (
-    <div className={`toast toast-${props.title}`}>
-      <main className="toast__message">
-        <header className="toast__message-title">{props.title}</header>
-        <p className="toast__message-text">{props.text}</p>
-      </main>
-      <button className="toast__button">Dismiss</button>
-    </div>
-  );
+const Toast = ({ message, children }) => {
+  return <div className={`toast toast-${message.title}`}>{children}</div>;
 };
 
 export default Toast;

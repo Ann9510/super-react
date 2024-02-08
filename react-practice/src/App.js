@@ -3,6 +3,8 @@ import "./App.css";
 import TextComponent from "./components/TextComponent";
 import Section from "./components/Section";
 import Toast from "./components/Toast";
+import ToastButton from "./components/ToastButton";
+import ToastMessage from "./components/ToastMessage";
 
 function App() {
   const messageArray = [
@@ -11,20 +13,8 @@ function App() {
       text: "Right on! Your account has been updated.",
     },
     {
-      title: "success",
-      text: "Right on! Your account has been updated.",
-    },
-    {
       title: "warning",
       text: "Hmmm. Something doesn't look right",
-    },
-    {
-      title: "warning",
-      text: "Hmmm. Something doesn't look right",
-    },
-    {
-      title: "error",
-      text: "Uh oh! Something went terribly wrong!",
     },
     {
       title: "error",
@@ -34,9 +24,18 @@ function App() {
 
   return (
     <div className="wrapper">
-      {messageArray.map((message) => (
-        <Toast title={message.title} text={message.text} />
-      ))}
+      <Toast message={messageArray[0]}>
+        <ToastMessage message={messageArray[0]} />
+        <ToastButton />
+      </Toast>
+      <Toast message={messageArray[1]}>
+        <ToastMessage message={messageArray[1]} />
+        <ToastButton />
+      </Toast>
+      <Toast message={messageArray[2]}>
+        <ToastMessage message={messageArray[2]} />
+        <ToastButton />
+      </Toast>
     </div>
   );
 }
