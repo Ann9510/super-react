@@ -8,3 +8,7 @@ const Toast = ({ message, children }) => {
 };
 
 export default Toast;
+
+const hello = 10;
+const world = 20;
+export { hello, world };

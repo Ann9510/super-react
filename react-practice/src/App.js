@@ -1,8 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import TextComponent from "./components/TextComponent";
-import Section from "./components/Section";
-import Toast from "./components/Toast";
+import Toast, { hello, world } from "./components/Toast";
 import ToastButton from "./components/ToastButton";
 import ToastMessage from "./components/ToastMessage";
 
@@ -36,6 +33,8 @@ function App() {
         <ToastMessage message={messageArray[2]} />
         <ToastButton />
       </Toast>
+      {hello}
+      {world}
     </div>
   );
 }
