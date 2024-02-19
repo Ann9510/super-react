@@ -20,7 +20,7 @@ function App() {
         id: Math.random().toString(),
         title: data.name,
         amount: data.price,
-        date: data.today,
+        date: new Date(data.today),
       },
     ]);
   };
