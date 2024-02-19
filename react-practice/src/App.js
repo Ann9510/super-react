@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import AlexaImage from "./images/alexa.png";
+import SiriImage from "./images/siri.png";
+
+console.log("AlexaImage", AlexaImage);
+console.log("SiriImage", SiriImage);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>hello image</p>
+      <img src={AlexaImage} alt="alexa" width={500} height={500} />
+      <img src={SiriImage} alt="siri" style={{ width: 500, height: 500 }} />
     </div>
   );
 }
